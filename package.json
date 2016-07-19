@@ -3,6 +3,9 @@
   "version": "1.1.1",
   "description": "fakeNatureV1: An Ionic project", 
   "repository": "https://github.com/asantos3026/fakeNatureV1",
+  "scripts": {
+      "start": "node server.js"
+    },
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
