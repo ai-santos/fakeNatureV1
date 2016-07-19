@@ -1,10 +1,13 @@
-<ion-view view-title="Chats">
+<ion-view view-title="Friend Feed">
   <ion-content>
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+        <!-- you need img ng-src in order to display images --> 
         <img ng-src="{{chat.face}}">
         <h2>{{chat.name}}</h2>
         <p>{{chat.lastText}}</p>
+        <img class = "feedpix" ng-src="{{chat.pic}}"> 
+        <p>{{chat.desc}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
         <ion-option-button class="button-assertive" ng-click="remove(chat)">

@@ -2,6 +2,24 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
+// .controller('PixCtrl', function($scope) {
+//   $scope.pix = [
+//    "img/yosemite.png", "img/yosemite.png", 
+//    "img/yosemite.png", "img/yosemite.png", 
+//    "img/yosemite.png", "img/yosemite.png", 
+//    "img/yosemite.png", "img/yosemite.png",
+//     "img/yosemite.png"
+//   ];
+// });
+
+.controller('SignupCtrl', function($scope) {
+  alert('running signup ctrl');
+})
+
+.controller('MapCtrl', function($scope) {
+  alert('map displaying');
+})
+
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.

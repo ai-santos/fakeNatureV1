@@ -1,1 +1,11 @@
 /* Empty. Add your own CSS if you like */
+.feedpix {
+  width: 50%;
+  height: 50%;
+}
+
+.gallerypix {
+  width: 120px;
+  height: 120px;
+  padding: 10px;
+}
