@@ -63,9 +63,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   .state('tab.map', {
     url: '/map',
     views: {
-      'tab-dash': {
+      'tab-map': {
         templateUrl: 'templates/map.html',
-        controller: 'MapCtrl'
+        controller: 'DashCtrl'
       }
     }
   })
@@ -75,7 +75,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       url: '/chats',
       views: {
         'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
+          templateUrl: 'templates/feed.html',
           controller: 'ChatsCtrl'
         }
       }
