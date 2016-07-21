@@ -90,7 +90,13 @@ p {
 }
 
 .pane {
-	background-color: #7BCCB5;
+	background-color: #C0D9AF;
+
+}
+
+.form-control {
+	background-color: #C0D9AF;
+	box-shadow: 1px 1px 1px 1px grey;
 
 }
 
