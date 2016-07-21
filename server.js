@@ -1,12 +1,19 @@
-var express = require('express'),
+var express = require('express')
+var request = require('request')
+
 app = express();
 
 app.use(express.static('www'));
 
 app.set('port', process.env.PORT || 3000);
 
-app.get('/favicon.ico', function (req, res) {
-  res.send('fi');
+app.get('/api-test-users', function(req, res) {
+  var uri = 'http://naturegram-api.herokuapp.com/api/v1/users'
+  request(uri, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      res.status(200).send(body);
+    }
+  })
 })
 
 app.listen(app.get('port'), function () {
