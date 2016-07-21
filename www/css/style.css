@@ -1,11 +1,108 @@
 /* Empty. Add your own CSS if you like */
+/*font*/
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+* {
+    font-family: 'Lobster'; 
+    font-color: #2F4F4F;
+}
+
+h1 {
+	font-family: 'Lobster';
+	font-color: #2F4F4F;
+	font-size: 55px;
+	position: relative;
+}
+
+h4 {
+	font-family: 'Lobster';
+	font-color: #2F4F4F;
+}
+
+a {
+	font-family: 'Lobster';
+	font-size: 20px;
+}
+
+
+
+/*content*/
+
+ion-view {
+	border: solid;
+	border-color: black;
+	border-size: .5px;
+	background-color: transparent;
+
+}
+
+ion-content {
+	border: solid;
+	border-color: black;
+	border-size: .5px;
+	overflow: none;
+
+}
+
+.button-energized {
+	width: 100%;
+	font-size: 50px;
+	font-color: white;
+	color:black;
+}
+
+ion-option-button {
+	color: black;
+}
+
+
+
+.gallerypix {
+	padding: 2px;
+}
+
+p {
+	position: relative;
+	font-size: 30px;
+
+
+	padding: 1px;
+}
+
+
 .feedpix {
   width: 50%;
   height: 50%;
 }
 
 .gallerypix {
-  width: 120px;
-  height: 120px;
-  padding: 10px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  padding: 1px;
+  padding-right: 3px;
+  padding-left: 3px;
+
+}
+
+.ion-item {
+	width: 120px;
+	height: 120px;
+}
+
+.pane {
+	background-color: #7BCCB5;
+
+}
+
+.tab-dash {
+  
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 80%;
+    height: 246px;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+    font-size: 100px;
 }

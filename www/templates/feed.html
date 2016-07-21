@@ -1,17 +1,24 @@
 <ion-view view-title="Feed">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
-        <img ng-src="{{chat.face}}">
-        <h2>{{chat.name}}</h2>
+      <center> 
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}" style= "width:300px; height:300px;">
+        <img ng-src="{{chat.face}}" style = "width:300px;; height:300px">
+       <!--  <h2>{{chat.name}}</h2>
         <p>{{chat.lastText}}</p>
-        <p>{{chat.pic}}</p>
+        <p>{{chat.pic}}</p> -->
         <i class="icon ion-chevron-right icon-accessory"></i>
-
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
+        <br>
+        <br>
+         </center>
       </ion-item>
     </ion-list>
+    <center>
+        <br>
+        <br>
+     <ion-option-button class="bbutton button-outline button-energized" ng-click="remove(chat)">
+          Delete
+        </ion-option-button> 
+        </center>
   </ion-content>
 </ion-view>
