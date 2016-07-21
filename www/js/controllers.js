@@ -35,8 +35,9 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+.controller('ChatDetailCtrl', function($scope, $stateParams, Chats, Users) {
   $scope.chat = Chats.get($stateParams.chatId);
+  $scope.chat.users = 'Larry, Curly, Moe';
 })
 
 .controller('AccountCtrl', function($scope) {

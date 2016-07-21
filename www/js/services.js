@@ -1,12 +1,34 @@
 angular.module('starter.services', [])
 
-.factory('Users', function() {
-  var uri = 'http://naturegram-api.herokuapp.com/api/v1/users'
-  request(uri, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-      res.status(200).send(body);
+.factory('Users', function ($http) {
+  var users = [{name: 'John'}, {name: 'Bill'}];
+
+  return {
+    // all: function() {
+    //   return users;
+    // },
+    get: function(userId) {
+      for (var i = 0; i < users.length; i++) {
+        if (users[i].id === parseInt(userId)) {
+          return users[i];
+        }
+      }
+      return null;
     }
-  })
+  };
+
+  // $http({
+  //   method: 'GET',
+  //   url: 'http://naturegram-api.herokuapp.com/api/v1/users'
+  // })
+  // .then(function successCallback(response) {
+  //     users = response
+  //     console.log(response)
+  //
+  //   }, function errorCallback(response) {
+  //     console.log('This error happened', response)
+  //   });
+
 })
 
 .factory('Chats', function() {
