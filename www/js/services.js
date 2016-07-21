@@ -1,5 +1,14 @@
 angular.module('starter.services', [])
 
+.factory('Users', function() {
+  var uri = 'http://naturegram-api.herokuapp.com/api/v1/users'
+  request(uri, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+      res.status(200).send(body);
+    }
+  })
+})
+
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 

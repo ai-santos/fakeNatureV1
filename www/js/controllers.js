@@ -16,7 +16,7 @@ angular.module('starter.controllers', [])
   alert('running signup ctrl');
 })
 
-.controller('MapCtrl', function($scope) {
+.controller('MapCtrl', function($scope, Users) {
   alert('map displaying');
 })
 
