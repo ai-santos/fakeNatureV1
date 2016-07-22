@@ -9,8 +9,12 @@
         <h2>{{chat.name}}</h2>
         <p>{{chat.lastText}}</p>
         <div id="pictures">
-            pictures are {{pictures}}
+            picture is {{pictures}}
         </div>
+
+        <!-- <div ng-repeat="picture in pictures" id="pictures">
+     <img ng-src="{{picture.pic_url}}" alt="" />
+    </div> --> 
 
         <i class="icon ion-chevron-right icon-accessory"></i>
         <br>
@@ -19,6 +23,8 @@
       </ion-item>
     </ion-list>
     <center>
+        <br>
+        <br>
         <br>
         <br>
      <ion-option-button class="button button-outline button-energized" ng-click="remove(chat)">

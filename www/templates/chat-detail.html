@@ -6,10 +6,18 @@
 -->
 <ion-view view-title="Profile">
   <ion-content class="padding">
+  <div class = "scroll">
     <img ng-src="{{chat.face}}" style="width: 64px; height: 64px" radius="50%">
     <a href="#/tab/map">Map</a>
+<<<<<<< HEAD
     <div class = "feedpix" ng-repeat="picture in pictures" id="pictures">
      <img ng-src="{{picture.pic_url}}" alt="" />
+=======
+    <div ng-repeat="picture in pictures" id="pictures">
+      <a href="">
+        <img ng-src="{{picture.pic_url}}" alt="" />
+      </a>
+>>>>>>> 0247887fdbfd76e0aa6ef1b4d37861d9ace60878
     </div>
   <!--   <div class="row">
        <div class="col-1"> <img class="gallerypix" ng-src="{{chat.pic}}"></div>
@@ -29,7 +37,7 @@
        <div class="col-3"><img class="gallerypix" ng-src="{{chat.pic}}"></div>
     </div>   -->      
 
-
+</div
 
   </ion-content>
 </ion-view>
