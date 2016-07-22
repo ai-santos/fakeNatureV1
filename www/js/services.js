@@ -1,34 +1,25 @@
 angular.module('starter.services', [])
 
+
+
+
+
 .factory('Users', function ($http) {
-  var users = [{name: 'John'}, {name: 'Bill'}];
-
   return {
-    // all: function() {
-    //   return users;
-    // },
-    get: function(userId) {
-      for (var i = 0; i < users.length; i++) {
-        if (users[i].id === parseInt(userId)) {
-          return users[i];
-        }
-      }
-      return null;
+    get: function() {
+      return $http({
+        method: 'GET',
+        url: 'http://naturegram-api.herokuapp.com/api/v1/users'
+      })
+      .then(function successCallback(response) {
+        console.log('response is', response)
+        return response
+      }, function errorCallback(error) {
+        console.log('This error happened', error)
+        return error
+      });    
     }
-  };
-
-  // $http({
-  //   method: 'GET',
-  //   url: 'http://naturegram-api.herokuapp.com/api/v1/users'
-  // })
-  // .then(function successCallback(response) {
-  //     users = response
-  //     console.log(response)
-  //
-  //   }, function errorCallback(response) {
-  //     console.log('This error happened', response)
-  //   });
-
+  }
 })
 
 .factory('Chats', function() {

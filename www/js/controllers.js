@@ -1,16 +1,29 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ngCordova'])
 
 .controller('DashCtrl', function($scope) {})
 
-.controller('CameraCtrl', function($scope) {
+// .controller('CameraCtrl', function($scope, $cordovaCamera) {
 
-    $scope.picture = 'http://placehold.it/300x300';
-    $scope.takePicture = function() {
-      
+//     $scope.picture = 'http://placehold.it/300x300';
+//     $scope.takePicture = function() {
 
-    };
+//       var options = {
+//           destinationType: Camera.DestinationType.DATA_URL,
+//           encodingType: Camera.EncodingType.JPEG,
 
-})
+//       }
+
+//       $cordovaCamera.getPicture(options)
+//       .then(function(data) {
+//         console.log('camera data: ' + angular.toJson(data));
+//           $scope.picture = 'data:image/jpeg;base64,' + data;
+//       }, function(error) {
+//         console.log('camera data: ' + angular.toJson(data));
+
+//       }); 
+//     };
+
+// })
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function(){
@@ -50,8 +63,14 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+.controller('ChatDetailCtrl', function($scope, $stateParams, Chats, Users) {
   $scope.chat = Chats.get($stateParams.chatId);
+  Users.get().then(function(response){
+    $scope.users = response 
+  })
+
+
+
 })
 
 

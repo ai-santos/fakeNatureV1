@@ -7,8 +7,8 @@ app.use(express.static('www'));
 
 app.set('port', process.env.PORT || 3000);
 
-app.get('/api-test-users', function(req, res) {
-  var uri = 'http://naturegram-api.herokuapp.com/api/v1/users'
+app.get('/pictures', function(req, res) {
+  var uri = 'http://naturegram-api.herokuapp.com/pictures'
   request(uri, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       res.status(200).send(body);

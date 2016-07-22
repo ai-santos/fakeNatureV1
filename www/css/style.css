@@ -13,7 +13,7 @@ h1 {
 	position: relative;
 }
 
-h2 {
+h2, h3 {
 	font-family: 'Lobster';
 	font-color: #2F4F4F;
 	font-size: 35px;
