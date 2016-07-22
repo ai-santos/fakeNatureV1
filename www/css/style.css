@@ -96,6 +96,10 @@ p {
 
 }
 
+.item {
+	font-size: 30px;
+}
+
 .ion-item {
 	width: 120px;
 	height: 120px;
@@ -103,6 +107,11 @@ p {
 
 .pane {
 	background-color: #C0D9AF;
+
+}
+
+.feedpix {
+	border: 2px;
 
 }
 
