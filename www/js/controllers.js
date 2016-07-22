@@ -2,10 +2,33 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
+.controller('CameraCtrl', function($scope) {
 
+    $scope.picture = 'http://placehold.it/300x300';
+    $scope.takePicture = function() {
+      
+
+    };
+
+})
+
+.run(function($ionicPlatform) {
+  $ionicPlatform.ready(function(){
+    if(window.cordova && window.cordova.plugins.Keyboard) {
+      cordova.plugins.Keyboard.hideKeyboardAcessoryBar(true);
+    }
+    if (window.StatusBar){
+      StatusBar.styleDefault();
+    }
+  });
+})
 
 .controller('SignupCtrl', function($scope) {
   alert('running signup ctrl');
+})
+
+.controller('AccountCtrl', function($scope) {
+  alert('Take a Picture');
 })
 
 // .controller('MapCtrl', function($scope) {
