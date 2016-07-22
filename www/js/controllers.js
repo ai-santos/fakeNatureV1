@@ -27,10 +27,11 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats, Users) {
+.controller('ChatDetailCtrl', function($scope, $stateParams, Chats, Pictures) {
   $scope.chat = Chats.get($stateParams.chatId);
-  Users.get().then(function(value){
-    $scope.users = value
+  Pictures.get().then(function(value){
+    $scope.pictures = value.data
+    console.log('this is the picture', value);
   })
 })
 

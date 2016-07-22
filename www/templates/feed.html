@@ -4,9 +4,12 @@
       <center> 
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}" style= "width:300px; height:300px;">
         <img ng-src="{{chat.face}}" style = "width:300px;; height:300px">
-       <!--  <h2>{{chat.name}}</h2>
+        <h2>{{chat.name}}</h2>
         <p>{{chat.lastText}}</p>
-        <p>{{chat.pic}}</p> -->
+        <div id="pictures">
+            pictures are {{pictures}}
+        </div>
+
         <i class="icon ion-chevron-right icon-accessory"></i>
         <br>
         <br>

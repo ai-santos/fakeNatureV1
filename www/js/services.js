@@ -1,6 +1,25 @@
 angular.module('starter.services', [])
 
-.service()
+.factory('Pictures', function ($http) {
+  return {
+    // all: function() {
+    //   return users;
+    // },
+    get: function() {
+      return $http({
+        method: 'GET',
+        url: 'https://naturegram-api.herokuapp.com/api/v1/pictures'
+      })
+      .then(function successCallback(pictures) {
+          return pictures
+          console.log(pictures);
+        }, function errorCallback(response) {
+          return response
+        });
+    }
+  };
+
+})
 
 .factory('Users', function ($http) {
   return {
